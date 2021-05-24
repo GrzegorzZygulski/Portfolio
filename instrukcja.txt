@@ -1,0 +1,4 @@
+do poprawnego uruchomienia tego programu musisz mieæ 2 rzeczy!
+1. Zainstalowane œrodowisko uruchomieniowe javy - Java Runtime Envirement (JRE)
+2. muszisz mieæ zainstalowane œrodowisko, które obs³u¿y PHP, by ogl¹daæ wyniki demoPage.
+np. w XAMPPie projekt powinien byæ umieszczony tak: C:\xampp\htdocs\seleniumGit.
