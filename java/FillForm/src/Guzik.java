@@ -9,8 +9,8 @@ import javax.swing.JPanel;
 public class Guzik extends JButton implements MouseListener { // np. przycik wyœlij
 	JPanel Panel;
 	String text;
-	tekstArea textArea;
-	tekstArea[] inputy;
+	TekstArea textArea;
+	TekstArea[] inputy;
 
 	Guzik(String tekst) {
 		super(tekst); // showed title od button
@@ -19,7 +19,7 @@ public class Guzik extends JButton implements MouseListener { // np. przycik wyœ
 		addMouseListener(this);
 	}
 
-	Guzik(tekstArea[] inputy, String tekst) { // np. przycik wyœlij
+	Guzik(TekstArea[] inputy, String tekst) { // np. przycik wyœlij
 		super(tekst); // showed title od button
 		this.setFont(new Font("Arial", Font.PLAIN, 20));
 		this.setName(tekst); // 8r source for mouselistener
@@ -28,7 +28,7 @@ public class Guzik extends JButton implements MouseListener { // np. przycik wyœ
 	}
 /** inputy[] czyli pojedyñcze pola tekstowe np. w kolejce lub wysy³ane do serwera. 
  *  Korzystj¹ z tego kontruktora przciski np.  => oraz  'dodaj do obszaru roboczego' */
-	Guzik(tekstArea textArea, tekstArea[] inputy, String tekst) { 
+	Guzik(TekstArea textArea, TekstArea[] inputy, String tekst) { 
 		super(tekst); // showed title od button
 		this.setFont(new Font("Arial", Font.PLAIN, 20));
 		this.setName(tekst); // 8r source for mouselistener
@@ -49,8 +49,8 @@ public class Guzik extends JButton implements MouseListener { // np. przycik wyœ
 		}
 		if (source.contains("wyœ")) {
 			System.out.println("zbieramy z ma³ych pó³ i wysy³amy");
-			webDriver driver = null;
-			driver = new webDriver(driver, inputy);
+			Driver driver = null;
+			driver = new Driver(driver, inputy);
 		}
 		if (source.contains("dodaj do kolejki")) {
 			System.out.println("\n dodaj do kolejki");

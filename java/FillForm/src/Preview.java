@@ -13,14 +13,14 @@ public class Preview extends JPanel {
 	final static boolean shouldWeightX = true;
 	final static boolean RIGHT_TO_LEFT = false;
 	private Guzik przenies;
-	public static tekstArea[] inputy;
+	public static TekstArea[] inputy;
 	private JLabel[] labels4input;
 
 	/**
 	 * textArea to referencja do pola tekstowego z mainPanel, rows oznacza ile ma
 	 * <inputów> zrobić
 	 */
-	public Preview(tekstArea textArea, int rows) {
+	public Preview(TekstArea textArea, int rows) {
 
 		this.setLayout(new GridBagLayout()); // here this==westPanels
 		this.setMaximumSize(new Dimension(635, 500));
@@ -39,7 +39,7 @@ public class Preview extends JPanel {
 		}
 		c.gridheight = 1;
 
-		inputy = new tekstArea[rows]; // zaalokownie miejsca w RAMie
+		inputy = new TekstArea[rows]; // zaalokownie miejsca w RAMie
 		labels4input = new JLabel[rows]; // zaalokownie miejsca w RAMie
 		labels4input[0] = new JLabel("nazwa");
 		labels4input[1] = new JLabel("miejscowość");
@@ -52,7 +52,7 @@ public class Preview extends JPanel {
 		labels4input[8] = new JLabel("email");
 
 		for (int gridY = 0; gridY < rows; gridY++) {
-			inputy[gridY] = new tekstArea("pole " + gridY);
+			inputy[gridY] = new TekstArea("pole " + gridY);
 			inputy[gridY].setSize(500, 20);
 			inputy[gridY].setLineWrap(true);
 			inputy[gridY].setWrapStyleWord(true);

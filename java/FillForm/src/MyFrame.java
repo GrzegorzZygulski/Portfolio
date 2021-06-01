@@ -8,7 +8,7 @@ public static JFrame frame;
 	public MyFrame() {
 		super("Filler");
 		frame=this;
-		JPanel panel = new mainPanel(frame);
+		JPanel panel = new MainPanel(frame);
 
 		add(panel);
 

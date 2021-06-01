@@ -8,7 +8,7 @@
 
 Uruchamianie
 	1. do funkcjonowania programu potrzebne jest środowisko uruchomieniowe javy (z ang. Java Runtime Environment - JRE)
-	2. po uruchomieniu programu by działał Selenium, potrzebny jest serwer Apache (tu projekt skonfigurowany jest pod strukture XAMPP'a),
-		w związku z powyższym projekt DEMO do poprawnego działanie musi znajdować się w foldereze ./htdocs/
+	2. po uruchomieniu programu by działała strona www, potrzebny jest serwer Apache (tu projekt skonfigurowany jest pod strukture XAMPP'a),
+		w związku z powyższym projekt DEMO do poprawnego działanie musi znajdować się w folderze ./htdocs/
 		czyli np. C:\xampp\htdocs\java
 

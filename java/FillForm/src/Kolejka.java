@@ -13,13 +13,13 @@ public class Kolejka extends JPanel {
 	final static boolean shouldWeightX = true;
 	final static boolean RIGHT_TO_LEFT = false;
 	private Guzik przenies;
-	public static tekstArea[] kolejka;
-	tekstArea textArea;
+	public static TekstArea[] kolejka;
+	TekstArea textArea;
 	/**
 	 * textArea to referencja do pola tekstowego z mainPanel, rows oznacza ile ma
 	 * <inputów> zrobić
 	 */
-	public Kolejka(tekstArea textArea, int rows) {
+	public Kolejka(TekstArea textArea, int rows) {
 
 		this.setLayout(new GridBagLayout()); // here this==westPanels
 		this.setMaximumSize(new Dimension(800, 500));
@@ -30,9 +30,9 @@ public class Kolejka extends JPanel {
 		c.insets = new Insets(5, 5, 5, 5); // padding
 		c.gridheight = 1;
 
-		kolejka = new tekstArea[20]; // zaalokownie miejsca w RAMie
+		kolejka = new TekstArea[20]; // zaalokownie miejsca w RAMie
 		for (int gridX = 0; gridX < 20; gridX++) {
-			kolejka[gridX] = new tekstArea("|");
+			kolejka[gridX] = new TekstArea("|");
 			String gridXString= String.valueOf(gridX); // by iterator int na stringa przerobic
 			kolejka[gridX].setName(gridXString);
 			kolejka[gridX].setSize(180, 200);
@@ -74,8 +74,8 @@ public class Kolejka extends JPanel {
 
 	}
 /** adds text from 'obszar roboczy' to 'kolejka'*/
-	public static void add(tekstArea textArea) {
-		for (tekstArea customer: kolejka) { // foreach customerin kolejka
+	public static void add(TekstArea textArea) {
+		for (TekstArea customer: kolejka) { // foreach customerin kolejka
 			// System.out.println(textArea.getText()");
 			if (customer.getText().contains("|") == true) { // customer zawiera znak | oznacza to  że to pole jest "puste bo rzadko w danych polskich | występuje
 				System.out.println("tu wstawi wynik: "+ customer.getName());
@@ -86,8 +86,8 @@ public class Kolejka extends JPanel {
 		}
 	}
 	/** adds text from 'kolejka' to 'preview/podglad'*/
-	public static void dodajDoPreview(tekstArea[] inputy) {
-		for (tekstArea customer: kolejka) { // foreach customerin kolejka
+	public static void dodajDoPreview(TekstArea[] inputy) {
+		for (TekstArea customer: kolejka) { // foreach customerin kolejka
 			// System.out.println(textArea.getText()");
 			if (customer.getText().contains("|") != true) { // jeżli nie zawiera znaku |, to znaczy ze są tam jakieś dane
 				System.out.println("biorę wynik z : "+ customer.getName());
